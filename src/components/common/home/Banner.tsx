@@ -3,10 +3,11 @@ import { Carousel, Col, Container, ListGroup, Row } from 'react-bootstrap';
 import banner1 from 'assets/images/banner1.png';
 import banner2 from 'assets/images/banner2.png';
 import banner3 from 'assets/images/banner3.png';
+import { FaShoppingCart } from 'react-icons/fa';
 
 const Banner = () => {
   return (
-    <div className="bg-light">
+    <div className="banner">
       <Container>
         <Row>
           <Col lg={3}>
@@ -30,10 +31,18 @@ const Banner = () => {
                   alt="First slide"
                 />
                 <Carousel.Caption>
-                  <h3>First slide label</h3>
+                  <b>Big Sale Offer</b>
+                  <h1>High-Quality Product Camera</h1>
                   <p>
-                    Nulla vitae elit libero, a pharetra augue mollis interdum.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua.
                   </p>
+                  <div className="banner__slider-button">
+                    <a className="border-0 text-center" href="#">
+                      <FaShoppingCart /> Shop Now
+                    </a>{' '}
+                  </div>
                 </Carousel.Caption>
               </Carousel.Item>
               <Carousel.Item interval={500}>
@@ -43,10 +52,18 @@ const Banner = () => {
                   alt="Second slide"
                 />
                 <Carousel.Caption>
-                  <h3>Second slide label</h3>
+                  <b>Big Sale Offer</b>
+                  <h1>High-Quality Product Camera</h1>
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua.
                   </p>
+                  <div className="banner__slider-button">
+                    <a className="border-0 text-center" href="#">
+                      <FaShoppingCart /> Shop Now
+                    </a>{' '}
+                  </div>
                 </Carousel.Caption>
               </Carousel.Item>
               <Carousel.Item>
@@ -56,11 +73,18 @@ const Banner = () => {
                   alt="Third slide"
                 />
                 <Carousel.Caption>
-                  <h3>Third slide label</h3>
+                  <b>Big Sale Offer</b>
+                  <h1>High-Quality Product Camera</h1>
                   <p>
-                    Praesent commodo cursus magna, vel scelerisque nisl
-                    consectetur.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua.
                   </p>
+                  <div className="banner__slider-button">
+                    <a className="border-0 text-center" href="#">
+                      <FaShoppingCart /> Shop Now
+                    </a>{' '}
+                  </div>
                 </Carousel.Caption>
               </Carousel.Item>
             </Carousel>

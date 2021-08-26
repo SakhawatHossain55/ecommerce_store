@@ -11,12 +11,18 @@ const HeaderButtom = () => {
             <BiMenu /> All Categories
           </Navbar.Brand>
           <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#features">Features</Nav.Link>
-            <Nav.Link href="#pricing">Pricing</Nav.Link>
+            <Nav.Link active href="#home">
+              Home
+            </Nav.Link>
+            <Nav.Link active href="#features">
+              Features
+            </Nav.Link>
+            <Nav.Link active href="#pricing">
+              Pricing
+            </Nav.Link>
           </Nav>
           <Nav className="ms-auto">
-            <Nav.Link href="tel:6545676789">
+            <Nav.Link active href="tel:6545676789">
               Hotline:(+1) 654 567 – 6789
             </Nav.Link>
           </Nav>

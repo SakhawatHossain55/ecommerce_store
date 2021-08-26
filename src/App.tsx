@@ -1,9 +1,10 @@
+import AppRouter from './AppRouter';
+
 function App() {
   return (
-    <div>
-      <h1>Hello world</h1>
-      <p>Thank you</p>
-    </div>
+    <>
+      <AppRouter />
+    </>
   );
 }
 

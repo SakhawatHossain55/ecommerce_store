@@ -7,6 +7,8 @@ import { IProduct } from 'type';
 import { FaShoppingCart, FaInstagram } from 'react-icons/fa';
 import { AiFillStar } from 'react-icons/ai';
 import { GrFacebookOption, GrTwitter, GrLinkedinOption } from 'react-icons/gr';
+import { useDispatch } from 'react-redux';
+import { addToCart } from 'redux/actions/cartActions';
 
 interface IParams {
   id: string;
@@ -22,7 +24,8 @@ const ProductDetails = () => {
     useAsync<IProduct>(getProduct);
   const { title, image, description, price, category } = (data ||
     {}) as IProduct;
-  console.log(name);
+
+  const dispatch = useDispatch();
 
   return (
     <div className=" product__detail">
@@ -66,11 +69,13 @@ const ProductDetails = () => {
                     <AiFillStar />
                   </li>
                 </ul>
-                <span className="mt-3 social-pricing mb-5">
-                  {' '}
+                <span className="mt-3 product__detail-pricing mb-5">
                   <del>$1500.00</del> ৳ {price}
                 </span>
-                <button className="btn-brand">
+                <button
+                  onClick={() => dispatch(addToCart(data as IProduct))}
+                  className="btn-brand"
+                >
                   <FaShoppingCart />
                   <span className="ms-2">Add to Cart</span>
                 </button>

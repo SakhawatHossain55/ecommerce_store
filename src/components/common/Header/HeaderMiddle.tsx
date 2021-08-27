@@ -2,8 +2,11 @@ import React from 'react';
 import { Button, Container, FormControl, InputGroup } from 'react-bootstrap';
 import { FaShoppingCart } from 'react-icons/fa';
 import { BiSearch } from 'react-icons/bi';
+import { useSelector } from 'react-redux';
+import { AppState } from 'redux/store';
 
 const HeaderMiddle = () => {
+  const cart = useSelector((state: AppState) => state.cart);
   return (
     <div className="header__middle">
       <Container>
@@ -23,6 +26,7 @@ const HeaderMiddle = () => {
           <span className="d-flex align-items-center">
             <FaShoppingCart />
           </span>
+          <span className="badge bg-primary">{cart.length}</span>
         </div>
       </Container>
     </div>

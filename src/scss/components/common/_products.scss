@@ -30,18 +30,24 @@
     }
   }
   &-social {
-      p {
-          font-weight: 600;
-      }
+    p {
+      font-weight: 600;
+    }
     li {
       width: 35px;
       height: 35px;
       border-radius: 50%;
       color: $white;
       background-color: $primary;
+      transition: 0.5s;
       display: flex;
       align-items: center;
       justify-content: center;
+      &:hover {
+        color: $primary;
+        border: 1px solid $primary;
+        background-color: $white;
+      }
     }
   }
 

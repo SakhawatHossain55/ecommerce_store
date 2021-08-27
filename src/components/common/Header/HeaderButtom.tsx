@@ -4,7 +4,7 @@ import { BiMenu } from 'react-icons/bi';
 
 const HeaderButtom = () => {
   return (
-    <div className="header__buttom">
+    <div className="header__buttom border-bottom bg-white">
       <Navbar variant="light">
         <Container>
           <Navbar.Brand className="header__buttom-Categories px-5" href="#">

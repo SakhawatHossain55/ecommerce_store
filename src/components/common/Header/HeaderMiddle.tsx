@@ -8,7 +8,7 @@ const HeaderMiddle = () => {
     <div className="header__middle">
       <Container>
         <div className="d-flex align-items-center gap-5 py-3">
-          <h1>ECONIX</h1>
+          <h1>NAME</h1>
           <InputGroup>
             <FormControl
               className="border border-primary"

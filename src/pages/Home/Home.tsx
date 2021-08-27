@@ -1,11 +1,24 @@
-import Banner from 'components/common/home/Banner';
-import React from 'react';
+import Banner from 'components/home/Banner';
+import Products from 'components/home/Products';
+// import React from 'react';
+import { useEffect, useState } from 'react';
+import ProductService from 'services/ProductService';
+import { IProduct } from 'type';
 
 const Home = () => {
+  const [data, setData] = useState<IProduct[]>([]);
+
+  useEffect(() => {
+    ProductService.getProducts().then((res) => {
+      setData(res);
+    });
+  }, []);
+
   return (
-    <div>
+    <>
       <Banner />
-    </div>
+      <Products products={data} />
+    </>
   );
 };
 

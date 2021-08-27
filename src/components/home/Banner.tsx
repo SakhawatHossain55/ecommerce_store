@@ -39,7 +39,7 @@ const Banner = () => {
                     aliqua.
                   </p>
                   <div className="banner__slider-button">
-                    <a className="border-0 text-center" href="#">
+                    <a className="border-0 text-center btn-brand" href="#">
                       <FaShoppingCart /> Shop Now
                     </a>{' '}
                   </div>
@@ -60,7 +60,7 @@ const Banner = () => {
                     aliqua.
                   </p>
                   <div className="banner__slider-button">
-                    <a className="border-0 text-center" href="#">
+                    <a className="border-0 text-center btn-brand" href="#">
                       <FaShoppingCart /> Shop Now
                     </a>{' '}
                   </div>
@@ -81,7 +81,7 @@ const Banner = () => {
                     aliqua.
                   </p>
                   <div className="banner__slider-button">
-                    <a className="border-0 text-center" href="#">
+                    <a className="border-0 text-center btn-brand" href="#">
                       <FaShoppingCart /> Shop Now
                     </a>{' '}
                   </div>

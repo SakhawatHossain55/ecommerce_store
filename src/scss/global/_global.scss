@@ -2,9 +2,27 @@
 
 body{
     font-family: $primaryFont;
-    background-color: #eeeff1;
+    background-color: #F9F9F9;
 }
 
 a {
     color: $black;
+}
+
+.btn-brand {
+    position: relative;
+      overflow: hidden;
+      z-index: 1;
+      background-color: $primary;
+      transition: 0.5s;
+      font-weight: 500;
+      padding: 15px 35px;
+      color: $white;
+      &:hover {
+        background-color: $white;
+        color: $primary;
+      }
+      svg {
+        margin-right: 7px;
+      }
 }

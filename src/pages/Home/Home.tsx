@@ -14,12 +14,12 @@ const Home = () => {
   //     setData(res);
   //   });
   // }, []);
-  const { data } = useAsync(ProductService.getProducts);
+  const { data, isSuccess, isLoading } = useAsync(ProductService.getProducts);
 
   return (
     <>
       <Banner />
-      <Products products={data} />
+      <Products isSuccess={isSuccess} isLoading={isLoading} products={data} />
     </>
   );
 };

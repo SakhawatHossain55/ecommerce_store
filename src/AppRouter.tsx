@@ -1,3 +1,4 @@
+import Footer from 'components/common/Footer';
 import Header from 'components/common/Header/Header';
 import ProductDetails from 'components/home/ProductDetails';
 import Home from 'pages/Home/Home';
@@ -12,6 +13,7 @@ const AppRouter = () => {
         <Route exact path="/" component={Home} />
         <Route exact path="/products/:id" component={ProductDetails} />
       </Switch>
+      <Footer />
     </Router>
   );
 };

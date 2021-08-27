@@ -35,7 +35,9 @@ const ProductDetails = () => {
             <h2>Products Details</h2>
             <ul className="d-flex list-unstyled ">
               <li>
-                <a href="/">Home </a>
+                <a className="product__detail-border-bottom" href="/">
+                  Home{' '}
+                </a>
               </li>
               <li>| Products Details</li>
             </ul>
@@ -83,7 +85,7 @@ const ProductDetails = () => {
                 <p>{description}</p>
                 <ul className="list-unstyled product__detail-social d-flex gap-2">
                   <p>Share:</p>
-                  <li className="d-flex justify-content-center align-items-center">
+                  <li>
                     <GrFacebookOption />
                   </li>
                   <li>

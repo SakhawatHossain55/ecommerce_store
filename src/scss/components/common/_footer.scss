@@ -1,0 +1,50 @@
+.footer {
+    background-color: #F5F5F5;
+    &__widget {
+        h2 {
+            margin-bottom: 20px;
+            font-size: 26px;
+            font-weight: 500;
+        }
+        ul {
+            li {
+                margin-bottom: 10px;
+                span {
+                    font-weight: 600;
+                    font-size: 18px;
+                }
+                a {
+                    color: #777777;
+                    &:hover {
+                        color: $secondary;
+                    }
+                }
+                
+            }
+        }
+    }
+    &-social {
+        li {
+          width: 45px;
+          height: 45px;
+          border-radius: 50%;
+          box-shadow: 0 1px 3px 0 #ccc, 0 1px 2px 0 #ccc;
+          transition: 0.5s;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          &:hover {
+            color: $white;
+            background-color: $primary;
+          }
+          svg {
+              color: black;
+              &:hover {
+                  color: $white;
+              }
+          }
+          
+        }
+      }
+}
+

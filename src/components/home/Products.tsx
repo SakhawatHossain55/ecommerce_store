@@ -4,7 +4,7 @@ import { Container, Row } from 'react-bootstrap';
 import { IProduct } from 'type';
 
 interface IProp {
-  products: IProduct[];
+  products: IProduct[] | null;
 }
 const Products = ({ products }: IProp) => {
   console.log(products);

@@ -36,7 +36,7 @@ const ProductDetails = () => {
             <ul className="d-flex list-unstyled ">
               <li>
                 <a className="product__detail-border-bottom" href="/">
-                  Home{' '}
+                  Home
                 </a>
               </li>
               <li>| Products Details</li>

@@ -14,6 +14,21 @@ const CartProduct = () => {
 
   return (
     <div className="cart">
+      <div className="product__detail-page-title">
+        <Container>
+          <div className="d-flex  justify-content-between py-3 align-items-center">
+            <h2>Cart</h2>
+            <ul className="d-flex list-unstyled ">
+              <li>
+                <a className="product__detail-border-bottom" href="/">
+                  Home
+                </a>
+              </li>
+              <li>| cart</li>
+            </ul>
+          </div>
+        </Container>
+      </div>
       <Container>
         <Row className="py-5">
           <Col md={8} className="cart__product">
@@ -29,6 +44,12 @@ const CartProduct = () => {
                 <CartItem cartItem={cartItem} key={cartItem.id} />
               ))}
             </Table>
+            <div>
+              <Col md={7} className="d-flex">
+                <input type="text" placeholder="Coupon code" />
+                <button>ApplyCoupon</button>
+              </Col>
+            </div>
           </Col>
           <Col md={4} className="cart__pricing bg-white rounded">
             <h3>Cart Totals</h3>
@@ -46,7 +67,9 @@ const CartProduct = () => {
                 <b>Payable Total</b> <span>${cart.length}</span>
               </li>
             </ul>
-            <button>Proceed to Checkout</button>
+            <button className="btn-brand">
+              <a href="#">Proceed to Checkout</a>
+            </button>
           </Col>
         </Row>
       </Container>

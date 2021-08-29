@@ -4,9 +4,16 @@ import { FaShoppingCart } from 'react-icons/fa';
 import { BiSearch } from 'react-icons/bi';
 import { useSelector } from 'react-redux';
 import { AppState } from 'redux/store';
+import { useHistory } from 'react-router-dom';
 
 const HeaderMiddle = () => {
   const cart = useSelector((state: AppState) => state.cart);
+
+  const history = useHistory();
+  const handleCartClick = () => {
+    history.push('/cartProduct');
+  };
+
   return (
     <div className="header__middle">
       <Container>
@@ -23,7 +30,7 @@ const HeaderMiddle = () => {
               <BiSearch className="text-white mx-3" />
             </Button>
           </InputGroup>
-          <span className="d-flex align-items-center">
+          <span onClick={handleCartClick} className="d-flex align-items-center">
             <FaShoppingCart />
           </span>
           <span className="badge bg-primary">{cart.length}</span>

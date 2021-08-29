@@ -1,0 +1,28 @@
+.cart {
+    &__product {
+        padding: 15px;
+        thead {
+            tr {
+                text-align: center;
+                background-color: #fff;
+                th {
+                    padding: 20px 5px;
+                    border: none;
+                }
+            }
+        }
+    }
+    &__pricing {
+        padding: 15px;
+        
+    }
+    &__items {
+        img {
+            max-width: 100px;
+            max-height: 100px;
+            background-color: #fff;
+            padding: 10px;
+        }
+    }
+
+}

@@ -2,12 +2,12 @@ import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import { BiMenu } from 'react-icons/bi';
 
-const HeaderButtom = () => {
+const HeaderButton = () => {
   return (
-    <div className="header__buttom border-bottom bg-white">
+    <div className="header__button border-bottom bg-white">
       <Navbar variant="light">
         <Container>
-          <Navbar.Brand className="header__buttom-Categories px-5" href="#">
+          <Navbar.Brand className="header__button-Categories px-5" href="#">
             <BiMenu /> All Categories
           </Navbar.Brand>
           <Nav className="me-auto">
@@ -32,4 +32,4 @@ const HeaderButtom = () => {
   );
 };
 
-export default HeaderButtom;
+export default HeaderButton;

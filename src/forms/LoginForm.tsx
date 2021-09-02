@@ -1,14 +1,20 @@
 import React, { useState } from 'react';
 import { Button, Col, Container, Form, Row } from 'react-bootstrap';
+import { useDispatch, useSelector } from 'react-redux';
+import { useHistory } from 'react-router-dom';
+import { login } from 'redux/actionCreators/authActionCreators';
+import { AppState } from 'redux/store';
 
 interface ILoginFormData {
-  email: string;
+  username: string;
   password: string;
 }
 
 const LoginForm = () => {
+  const dispatch = useDispatch();
+  const history = useHistory();
   const [formData, setFormData] = useState<ILoginFormData>({
-    email: '',
+    username: '',
     password: '',
   });
 
@@ -16,23 +22,33 @@ const LoginForm = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  const data = useSelector((state: AppState) => state.auth);
+
+  if (data) {
+    history.push('/');
+  }
   return (
     <div className="login__component">
       <Container>
         <div className="login_main py-5">
           <Row>
+            {/* {status === "error" && (
+              <Col md={{ span: 4, offset: 4 }} className="p-0">
+                <Alert variant="primary">{error}</Alert>
+              </Col>
+            )} */}
             <Col
               md={{ span: 4, offset: 4 }}
               className="float-center bg-white p-5 shadow-sm rounded"
             >
               <Form>
                 <Form.Group className="mb-3" controlId="formGroupEmail">
-                  <Form.Label>Email</Form.Label>
+                  <Form.Label>Username</Form.Label>
                   <Form.Control
-                    name="email"
+                    name="username"
                     onChange={handleOnChange}
-                    type="email"
-                    placeholder="Enter Your email"
+                    type="text"
+                    placeholder="Enter Your username"
                   />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formGroupPassword">
@@ -45,7 +61,12 @@ const LoginForm = () => {
                   />
                 </Form.Group>
                 <div className="d-grid gap-2">
-                  <Button variant="dark">LOGIN</Button>
+                  <Button
+                    onClick={() => dispatch(login(formData))}
+                    variant="dark"
+                  >
+                    LOGIN
+                  </Button>
                 </div>
               </Form>
               <div className="login-form-info  text-center">

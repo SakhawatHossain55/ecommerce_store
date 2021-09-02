@@ -1,5 +1,5 @@
 import React from 'react';
-import HeaderButtom from './HeaderButtom';
+import HeaderButton from './HeaderButton';
 import HeaderMiddle from './HeaderMiddle';
 import HeaderTop from './HeaderTop';
 
@@ -8,7 +8,7 @@ const Header = () => {
     <div className="header">
       <HeaderTop />
       <HeaderMiddle />
-      <HeaderButtom />
+      <HeaderButton />
     </div>
   );
 };

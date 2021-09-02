@@ -40,7 +40,9 @@ const HeaderMiddle = () => {
           >
             <FaShoppingCart />
           </span>
-          <span className="badge bg-primary">{cart.length}</span>
+          <span className="header__middle-length d-flex align-items-center justify-content-center bg-primary">
+            {cart.length}
+          </span>
           <span
             onClick={handleLoginClick}
             className="header__middle-icons d-flex align-items-center"

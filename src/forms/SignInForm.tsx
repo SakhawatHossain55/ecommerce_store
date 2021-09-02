@@ -2,12 +2,14 @@ import React, { useState } from 'react';
 import { Button, Col, Container, Form, Row } from 'react-bootstrap';
 
 interface ILoginFormData {
+  name: string;
   email: string;
   password: string;
 }
 
 const SignInForm = () => {
   const [formData, setFormData] = useState<ILoginFormData>({
+    name: '',
     email: '',
     password: '',
   });

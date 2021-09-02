@@ -6,7 +6,7 @@ class ProductService {
     return requests.get('/products');
   }
 
-  getProductByID(id: string): Promise<IProduct> {
+  getProductByID(id: string | number): Promise<IProduct> {
     return requests.get(`/products/${id}`);
   }
 

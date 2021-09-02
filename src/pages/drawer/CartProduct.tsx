@@ -38,8 +38,13 @@ const CartProduct = () => {
                   <th>Product</th>
                   <th>Product Name</th>
                   <th>Price</th>
+                  <th>Quantity</th>
+                  <th>Total</th>
                 </tr>
               </thead>
+              {cart.length === 0 ? (
+                <p className="text-center fw-bold py-3">No items in cart</p>
+              ) : null}
               {cart?.map((cartItem: IProduct) => (
                 <CartItem cartItem={cartItem} key={cartItem.id} />
               ))}

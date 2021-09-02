@@ -1,35 +1,50 @@
 .header {
-    &__top{
-        background-color: $primary;
-        color: $white;
-        a{
-            color: $white;
-            &:hover{
-                color: $secondary;
-            }
-        }
+  &__top {
+    background-color: $primary;
+    color: $white;
+    a {
+      color: $white;
+      &:hover {
+        color: $secondary;
+      }
     }
-    &__middle {
-        background-color: $primary-secondary;
-        color: $white;
-        h1 {
-            color: $white;
-            font-weight: bold;
-        }
-        span {
-            font-size: 25px;
-            cursor: pointer;
-        }
+  }
+  &__middle {
+    background-color: $primary-secondary;
+    color: $white;
+    h1 {
+      color: $white;
+      font-weight: bold;
     }
-    &__buttom {
-        nav {
-            padding-top: 0;
-            padding-bottom: 0;
-        }
-        &-Categories {
-            background-color: $primary;
-            color: $white !important;
-            padding: 10px 0;
-        }
+    span {
+      font-size: 25px;
+      cursor: pointer;
     }
+    &-icons {
+      width: 35px;
+      height: 35px;
+      padding: 5px;
+      text-align: center;
+      box-shadow: 0px 0px 4px $primary;
+      border-radius: 50%;
+      background-color: $primary;
+      svg {
+        margin: 3px;
+      }
+    }
+    .badge {
+        padding: 7px;
+    }
+  }
+  &__buttom {
+    nav {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+    &-Categories {
+      background-color: $primary;
+      color: $white !important;
+      padding: 10px 0;
+    }
+  }
 }

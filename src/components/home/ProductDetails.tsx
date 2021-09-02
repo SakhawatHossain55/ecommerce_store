@@ -8,7 +8,7 @@ import { FaShoppingCart, FaInstagram } from 'react-icons/fa';
 import { AiFillStar } from 'react-icons/ai';
 import { GrFacebookOption, GrTwitter, GrLinkedinOption } from 'react-icons/gr';
 import { useDispatch } from 'react-redux';
-import { addToCart } from 'redux/actions/cartActions';
+import { addToCart } from 'redux/actionCreators/cartActions';
 
 interface IParams {
   id: string;

@@ -16,7 +16,7 @@ const Products = ({ products, isLoading, isSuccess }: IProp) => {
         {isLoading && <ProductSkeleton />}
         {isSuccess && (
           <Row>
-            {products?.map((product: IProduct) => (
+            {products?.map((product: any) => (
               <Product key={product.id} product={product} />
             ))}
           </Row>

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Button, Col, Container, Form, Row } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
-import { useHistory } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import { login } from 'redux/actionCreators/authActionCreators';
 import { AppState } from 'redux/store';
 
@@ -72,13 +72,13 @@ const LoginForm = () => {
               <div className="text-center login-form-info">
                 <p className="py-4">
                   {` Don't have an account?`}
-                  <a href="/logout" className="text-primary ps-3">
+                  <Link to="/logout" className="text-primary ps-3">
                     Sign up
-                  </a>
+                  </Link>
                 </p>
-                <a href="/forgot-password" className="text-primary">
+                <Link to="/forgot-password" className="text-primary">
                   Forgot Password
-                </a>
+                </Link>
               </div>
             </Col>
           </Row>

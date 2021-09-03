@@ -1,7 +1,7 @@
 import useAsync from 'hooks/useAsync';
 import React, { useCallback } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import ProductService from 'services/ProductService';
 import { IProduct } from 'type';
 import { FaShoppingCart, FaInstagram } from 'react-icons/fa';
@@ -35,9 +35,9 @@ const ProductDetails = () => {
             <h2>Products Details</h2>
             <ul className="d-flex list-unstyled ">
               <li>
-                <a className="product__detail-border-bottom" href="/">
+                <Link className="product__detail-border-bottom" to="/">
                   Home
-                </a>
+                </Link>
               </li>
               <li>| Products Details</li>
             </ul>

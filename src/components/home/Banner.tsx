@@ -4,6 +4,7 @@ import banner1 from 'assets/images/banner1.png';
 import banner2 from 'assets/images/banner2.png';
 import banner3 from 'assets/images/banner3.png';
 import { FaShoppingCart } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const Banner = () => {
   return (
@@ -39,9 +40,9 @@ const Banner = () => {
                     aliqua.
                   </p>
                   <div className="banner__slider-button">
-                    <a className="border-0 text-center btn-brand" href="#">
+                    <Link className="border-0 text-center btn-brand" to="#">
                       <FaShoppingCart /> Shop Now
-                    </a>{' '}
+                    </Link>
                   </div>
                 </Carousel.Caption>
               </Carousel.Item>
@@ -60,9 +61,9 @@ const Banner = () => {
                     aliqua.
                   </p>
                   <div className="banner__slider-button">
-                    <a className="border-0 text-center btn-brand" href="#">
+                    <Link className="border-0 text-center btn-brand" to="#">
                       <FaShoppingCart /> Shop Now
-                    </a>{' '}
+                    </Link>
                   </div>
                 </Carousel.Caption>
               </Carousel.Item>
@@ -81,9 +82,9 @@ const Banner = () => {
                     aliqua.
                   </p>
                   <div className="banner__slider-button">
-                    <a className="border-0 text-center btn-brand" href="#">
+                    <Link className="border-0 text-center btn-brand" to="#">
                       <FaShoppingCart /> Shop Now
-                    </a>{' '}
+                    </Link>{' '}
                   </div>
                 </Carousel.Caption>
               </Carousel.Item>

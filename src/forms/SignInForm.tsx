@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Button, Col, Container, Form, Row } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 interface ILoginFormData {
   name: string;
@@ -61,9 +62,9 @@ const SignInForm = () => {
               <div className="login-form-info  text-center">
                 <p className="py-4">
                   {` Don't have an account?`}
-                  <a href="/login" className="text-primary ps-3">
+                  <Link to="/login" className="text-primary ps-3">
                     Login
-                  </a>
+                  </Link>
                 </p>
               </div>
             </Col>

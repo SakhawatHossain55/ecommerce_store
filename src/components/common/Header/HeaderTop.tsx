@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
 import { BsCheck } from 'react-icons/bs';
+import { Link } from 'react-router-dom';
 
 const HeaderTop = () => {
   return (
@@ -12,11 +13,11 @@ const HeaderTop = () => {
         </div>
         <div>
           <span>
-            <a href="#">Login </a>
+            <Link to="#">Login </Link>
           </span>
           Or
           <span>
-            <a href="#"> Register</a>
+            <Link to="#"> Register</Link>
           </span>
         </div>
       </Container>

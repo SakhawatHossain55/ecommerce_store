@@ -1,6 +1,7 @@
 import React from 'react';
 import { Col, Container, Row, Table } from 'react-bootstrap';
 import { useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { AppState } from 'redux/store';
 import { IProduct } from 'type';
 import CartItem from './CartItem';
@@ -20,9 +21,9 @@ const CartProduct = () => {
             <h2>Cart</h2>
             <ul className="d-flex list-unstyled ">
               <li>
-                <a className="product__detail-border-bottom" href="/">
+                <Link className="product__detail-border-bottom" to="/">
                   Home
-                </a>
+                </Link>
               </li>
               <li>| cart</li>
             </ul>
@@ -73,7 +74,7 @@ const CartProduct = () => {
               </li>
             </ul>
             <button className="btn-brand">
-              <a href="#">Proceed to Checkout</a>
+              <Link to="#">Proceed to Checkout</Link>
             </button>
           </Col>
         </Row>

@@ -2,6 +2,7 @@ import React from 'react';
 import { GrFacebookOption, GrTwitter, GrLinkedinOption } from 'react-icons/gr';
 import { FaInstagram } from 'react-icons/fa';
 import { Col, Container, Row } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -14,40 +15,40 @@ const Footer = () => {
               <ul className="list-unstyled">
                 <li>
                   <span>Address:</span>
-                  <a href="#" target="_blank">
+                  <Link to="/" target="_blank">
                     4848 Hershell Hollow Road Bothell, WA 89076
-                  </a>
+                  </Link>
                 </li>
                 <li>
                   <span>Phone:</span>
-                  <a href="tel:+15143214567">+1 (514) 321-4567</a>
+                  <Link to="tel:+15143214567">+1 (514) 321-4567</Link>
                 </li>
                 <li>
                   <span>Email:</span>
-                  <a href="mailto:hello@econix.com">hello@econix.com</a>
+                  <Link to="mailto:hello@econix.com">hello@econix.com</Link>
                 </li>
               </ul>
 
               <ul className="list-unstyled footer-social d-flex gap-2">
                 <li>
-                  <a href="#" target="_blank">
+                  <Link to="/" target="_blank">
                     <GrFacebookOption />{' '}
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" target="_blank">
+                  <Link to="/" target="_blank">
                     <GrTwitter />{' '}
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" target="_blank">
+                  <Link to="/" target="_blank">
                     <GrLinkedinOption />{' '}
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" target="_blank">
+                  <Link to="/" target="_blank">
                     <FaInstagram />{' '}
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -57,22 +58,22 @@ const Footer = () => {
               <h2>Policies</h2>
               <ul className="quick-links  list-unstyled">
                 <li>
-                  <a href="#">Shipping And Delivery</a>
+                  <Link to="/">Shipping And Delivery</Link>
                 </li>
                 <li>
-                  <a href="#">Payment Method</a>
+                  <Link to="/">Payment Method</Link>
                 </li>
                 <li>
-                  <a href="#">How to Shop</a>
+                  <Link to="/">How to Shop</Link>
                 </li>
                 <li>
-                  <a href="#">Terms And Conditions</a>
+                  <Link to="/">Terms And Conditions</Link>
                 </li>
                 <li>
-                  <a href="#">Privacy Policy</a>
+                  <Link to="/">Privacy Policy</Link>
                 </li>
                 <li>
-                  <a href="#">Returns</a>
+                  <Link to="/">Returns</Link>
                 </li>
               </ul>
             </div>
@@ -82,22 +83,22 @@ const Footer = () => {
               <h2>Support</h2>
               <ul className="footer__quick-links list-unstyled">
                 <li>
-                  <a href="#">My Account</a>
+                  <Link to="/">My Account</Link>
                 </li>
                 <li>
-                  <a href="#">Order Tracking</a>
+                  <Link to="/">Order Tracking</Link>
                 </li>
                 <li>
-                  <a href="#">Contact Us</a>
+                  <Link to="/">Contact Us</Link>
                 </li>
                 <li>
-                  <a href="#">Customer Services</a>
+                  <Link to="/">Customer Services</Link>
                 </li>
                 <li>
-                  <a href="#">FAQs</a>
+                  <Link to="/">FAQs</Link>
                 </li>
                 <li>
-                  <a href="#">Help Desk</a>
+                  <Link to="/">Help Desk</Link>
                 </li>
               </ul>
             </div>

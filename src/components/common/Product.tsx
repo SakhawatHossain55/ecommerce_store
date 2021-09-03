@@ -9,8 +9,6 @@ interface IProp {
 }
 
 const Product = ({ product }: IProp) => {
-  console.log(product);
-
   const { title, image, price, id } = product;
   const history = useHistory();
   const handleProductClick = () => {

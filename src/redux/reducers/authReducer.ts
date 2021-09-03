@@ -2,15 +2,43 @@ import { AuthAction } from 'redux/actions/authAction';
 import { ActionType } from 'redux/actionType';
 import { IAuthData } from 'type';
 
+interface IAuthState {
+  data: IAuthData | null;
+  status: 'idle' | 'pending' | 'success' | 'error';
+  error: null | string;
+}
+
+const initialState: IAuthState = {
+  data: null,
+  status: 'idle',
+  error: null,
+};
+
 const authReducer = (
-  state: IAuthData | null = null,
+  state: IAuthState = initialState,
   action: AuthAction
-): IAuthData | null => {
+): IAuthState => {
   switch (action.type) {
-    case ActionType.LOGIN:
-      return action.payload;
+    case ActionType.LOGIN_PENDING:
+      return {
+        data: null,
+        status: 'pending',
+        error: null,
+      };
+    case ActionType.LOGIN_SUCCESS:
+      return {
+        data: action.payload,
+        status: 'success',
+        error: null,
+      };
+    case ActionType.LOGIN_ERROR:
+      return {
+        data: null,
+        status: 'error',
+        error: action.payload,
+      };
     case ActionType.LOGOUT:
-      return null;
+      return initialState;
 
     default:
       return state;

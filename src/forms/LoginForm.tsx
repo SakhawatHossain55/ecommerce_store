@@ -22,7 +22,7 @@ const LoginForm = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const data = useSelector((state: AppState) => state.auth);
+  const { data } = useSelector((state: AppState) => state.auth);
 
   if (data) {
     history.push('/');
@@ -30,7 +30,7 @@ const LoginForm = () => {
   return (
     <div className="login__component">
       <Container>
-        <div className="login_main py-5">
+        <div className="py-5 login_main">
           <Row>
             {/* {status === "error" && (
               <Col md={{ span: 4, offset: 4 }} className="p-0">
@@ -39,7 +39,7 @@ const LoginForm = () => {
             )} */}
             <Col
               md={{ span: 4, offset: 4 }}
-              className="float-center bg-white p-5 shadow-sm rounded"
+              className="p-5 bg-white rounded shadow-sm float-center"
             >
               <Form>
                 <Form.Group className="mb-3" controlId="formGroupEmail">
@@ -60,7 +60,7 @@ const LoginForm = () => {
                     placeholder="Enter Password"
                   />
                 </Form.Group>
-                <div className="d-grid gap-2">
+                <div className="gap-2 d-grid">
                   <Button
                     onClick={() => dispatch(login(formData))}
                     variant="dark"
@@ -69,7 +69,7 @@ const LoginForm = () => {
                   </Button>
                 </div>
               </Form>
-              <div className="login-form-info  text-center">
+              <div className="text-center login-form-info">
                 <p className="py-4">
                   {` Don't have an account?`}
                   <a href="/logout" className="text-primary ps-3">

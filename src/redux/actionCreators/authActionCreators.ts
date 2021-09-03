@@ -5,17 +5,20 @@ import AuthService from 'services/AuthService';
 
 export const login = (payload: { username: string; password: string }) => {
   return (dispatch: Dispatch<AuthAction>) => {
+    dispatch({
+      type: ActionType.LOGIN_PENDING,
+    });
     AuthService.login(payload)
       .then((data) => {
         dispatch({
-          type: ActionType.LOGIN,
+          type: ActionType.LOGIN_SUCCESS,
           payload: data,
         });
       })
       .catch((err) => {
         dispatch({
-          type: ActionType.LOGIN,
-          payload: err,
+          type: ActionType.LOGIN_ERROR,
+          payload: err.message,
         });
       });
   };

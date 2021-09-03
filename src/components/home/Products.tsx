@@ -2,7 +2,6 @@ import Product from 'components/common/Product';
 import React from 'react';
 import { Container, Row } from 'react-bootstrap';
 import ProductSkeleton from 'skeletions/ProductSkeleton';
-
 import { IProduct } from 'type';
 
 interface IProp {
@@ -17,7 +16,7 @@ const Products = ({ products, isLoading, isSuccess }: IProp) => {
         {isLoading && <ProductSkeleton />}
         {isSuccess && (
           <Row>
-            {products?.map((product) => (
+            {products?.map((product: IProduct) => (
               <Product key={product.id} product={product} />
             ))}
           </Row>

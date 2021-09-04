@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button, Col, Container, Form, Row } from 'react-bootstrap';
+import { Alert, Button, Col, Container, Form, Row } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useHistory } from 'react-router-dom';
 import { login } from 'redux/actionCreators/authActionCreators';
@@ -22,7 +22,7 @@ const LoginForm = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const { data } = useSelector((state: AppState) => state.auth);
+  const { data, status, error } = useSelector((state: AppState) => state.auth);
 
   if (data) {
     history.push('/');
@@ -32,11 +32,11 @@ const LoginForm = () => {
       <Container>
         <div className="py-5 login_main">
           <Row>
-            {/* {status === "error" && (
+            {status === 'error' && (
               <Col md={{ span: 4, offset: 4 }} className="p-0">
                 <Alert variant="primary">{error}</Alert>
               </Col>
-            )} */}
+            )}
             <Col
               md={{ span: 4, offset: 4 }}
               className="p-5 bg-white rounded shadow-sm float-center"
@@ -62,6 +62,7 @@ const LoginForm = () => {
                 </Form.Group>
                 <div className="gap-2 d-grid">
                   <Button
+                    disabled={status === 'pending'}
                     onClick={() => dispatch(login(formData))}
                     variant="dark"
                   >

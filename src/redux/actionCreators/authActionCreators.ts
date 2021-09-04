@@ -18,7 +18,7 @@ export const login = (payload: { username: string; password: string }) => {
       .catch((err) => {
         dispatch({
           type: ActionType.LOGIN_ERROR,
-          payload: err.message,
+          payload: err?.response?.data?.msg,
         });
       });
   };

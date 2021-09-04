@@ -12,6 +12,7 @@ import CartItem from './CartItem';
 
 const CartProduct = () => {
   const cart = useSelector((state: AppState) => state.cart);
+  console.log(cart);
 
   return (
     <div className="cart">

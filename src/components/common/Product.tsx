@@ -24,11 +24,6 @@ const Product = ({ product }: IProp) => {
         >
           <img className="rounded bg-white mb-3" src={image} alt="" />
           <h3>{title}</h3>
-          <h3>{title}</h3>
-          <h3>{title}</h3>
-          <h3>{title}</h3>
-          <h3>{title}</h3>
-          <h3>{title}</h3>
           <ul className="list-unstyled d-flex">
             <li>
               <AiFillStar />

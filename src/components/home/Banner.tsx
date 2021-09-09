@@ -1,6 +1,6 @@
 import React from 'react';
 import { Carousel, Col, Container, ListGroup, Row } from 'react-bootstrap';
-import banner1 from 'assets/images/banner1.png';
+import banner1 from 'assets/images/banner__04.png';
 import banner2 from 'assets/images/banner2.png';
 import banner3 from 'assets/images/banner3.png';
 import { FaShoppingCart } from 'react-icons/fa';
@@ -25,7 +25,7 @@ const Banner = () => {
           </Col>
           <Col lg={9} className="mt-4">
             <Carousel>
-              <Carousel.Item interval={1000}>
+              <Carousel.Item interval={2000}>
                 <img
                   className="d-block w-100"
                   src={banner1}
@@ -46,7 +46,7 @@ const Banner = () => {
                   </div>
                 </Carousel.Caption>
               </Carousel.Item>
-              <Carousel.Item interval={500}>
+              <Carousel.Item interval={2000}>
                 <img
                   className="d-block w-100"
                   src={banner2}
@@ -67,7 +67,7 @@ const Banner = () => {
                   </div>
                 </Carousel.Caption>
               </Carousel.Item>
-              <Carousel.Item>
+              <Carousel.Item interval={2000}>
                 <img
                   className="d-block w-100"
                   src={banner3}
